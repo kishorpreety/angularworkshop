@@ -1,0 +1,25 @@
+h1{
+    color: #fefefe;
+}
+.table-striped tbody tr:nth-of-type(odd){
+    background-color: #000;
+}
+.table-striped tbody tr:nth-of-type(even){
+    background-color: #fff;
+}
+.table th, .table td{
+    border: none;
+    padding: 10px;
+      color: #eaeaea;
+}
+.table td h4{
+    font-size: 16px;
+    color: #eaeaea;
+}
+.table td a{
+    font-size: 14px;
+    color: #bff201;
+}
+.table td p{
+    color: #eaeaea;
+}

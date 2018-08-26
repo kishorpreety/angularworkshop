@@ -1,0 +1,81 @@
+.hm-content{
+    margin-top: 40px;
+}
+.hm-content hr{
+   border-top: 1px solid #bff201;
+}
+
+#myCarousel h4{
+	font-size:50px;
+	margin-bottom:15px;
+	color:#FFF;
+	line-height:100%;
+	letter-spacing:0.5px;
+	font-weight:600;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 3px;
+}
+#myCarousel p{
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    box-shadow: 0 0 black;
+    padding-top: 15px;
+}
+.lg-btn{
+    background: #fff;
+    border-radius: 15px !important;
+    color: #000;
+    font-size: 20px !important;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700 !important;
+    padding:10px 30px !important;
+}
+.rg-btn{
+    background: #bff201;
+    border-radius: 15px !important;
+    color: #000;
+    font-size: 20px !important;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700 !important;
+    padding:10px 30px !important;
+    margin-left: 15px;
+}
+#myCarousel .carousel-item a{background:#F47735; font-size:14px; color:#FFF; padding:13px 32px; display:inline-block; }
+#myCarousel .carousel-item a:hover{background:#394fa2; text-decoration:none;  }
+#myCarousel{position:relative; z-index:1;  }
+.tennis-col{
+    background: url('/assets/images/tennis.png');
+    background-repeat: no-repeat;
+    background-position: 0px top;
+    height: 800px;
+    padding: 30px 20px;
+}
+.hm-search {
+    float: right;
+    margin-top: 140px;
+    margin-left: 0px;
+    width: 290px;
+}
+.hm-search p:first-child {
+    font-size: 18px !important;
+}
+.hm-search p:first-child span{
+      font-size: 33px;
+      color: #fff;
+}
+.hm-search .last-par{
+    padding: 0px !important;
+    font-weight: normal;
+    font-size: 13px !important;
+    margin-right: 50px;
+}
+.hm-search a.btn{
+    border: 2px solid #bff201;
+    border-radius: 50px;
+    padding: 13px 30px;
+    font-size: 20px;
+    color: #bff201;
+}
