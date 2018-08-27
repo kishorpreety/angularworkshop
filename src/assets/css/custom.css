@@ -3,6 +3,7 @@ body{
     padding: 0px !important;
     font-family: 'Roboto', sans-serif;
     background:url('/assets/images/background.jpg') center center no-repeat; background-size:cover;
+     background-color: #100d06 !important;
 }
 .theme-color{
     color: #bff201
@@ -72,5 +73,6 @@ ul, ol {
     padding:10px 30px !important;
     margin-left: 15px;
 }
+   
 
 

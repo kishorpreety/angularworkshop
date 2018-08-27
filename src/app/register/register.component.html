@@ -1,12 +1,4 @@
-<!--<div class="container" >
-  <h1>Register works!</h1>
-  <label>Email :</label>
-  <input type="text" value=""> 
-  <label>Password :</label>
-  <input type="password" value="">
-  <input type="button" value="REGISTER">
-  <a routerLink="/login" class="btn lg-btn ">Login</a> 
-</div>-->
+
 <div class="container">
   <div class="row">
    <div class="col-sm-6">
@@ -84,6 +76,8 @@
         </div>
     </div>
    </div>
+
+
 <form 
  #f="ngForm" 
  (ngSubmit)="submit(f)" 
@@ -96,9 +90,23 @@
      </div>
   <div class="register-page">
   <header>
-     <h3 class="title-txt"> <span>Register</span></h3>
-     <p>Create your account.</p>
+      <a href="javascript:void(0)" class="back" style="display: none">Back To</a>
+     <h3 class="title-txt"> Sign Up</h3>
+     <p>It's free and handly take more than 30 seconds.</p>
   </header>
+<div class="register-choice-item player-item">
+    <h4>Sign Up as Player </h4>
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+</div>
+<div class="register-choice-item team-item">
+    <h4>Sign Up as Team </h4>
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+</div>
+   <div class="register-choice-item company-item">
+    <h4>Sign Up as Company </h4>
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+</div>
+<div class="panel-form player-signup"  style="display: none;">
    <div class="form-row">
      <label for="firstName">First Name</label>
      <input required ngModel name="firstName" #firstName="ngModel" (change)="log(firstName)" id="firstName" type="text" value="" class="form-control"> 
@@ -134,8 +142,89 @@
    </div>
    <div style="clear:both"></div>
   </div>
+
+<div class="panel-form team-signup"  style="display: none;">
+    <h1> Team</h1>
+   <div class="form-row">
+     <label for="firstName">First Name</label>
+     <input required ngModel name="firstName" #firstName="ngModel" (change)="log(firstName)" id="firstName" type="text" value="" class="form-control"> 
+     <div class="alert alert-danger" *ngIf="firstName.touched && !firstName.valid" >Fist Name is required </div>
+   </div>
+  <div class="form-row">
+     <label for="lastName">Last Name</label>
+     <input required ngModel name="lastName"  #lastName="ngModel" id="lastName" type="text" value="" class="form-control">
+          <div class="alert alert-danger" *ngIf="lastName.touched && !lastName.valid" >Last Name is required </div> 
+   </div>
+    <div class="form-row">
+     <label for="emailID">Email</label>
+     <input id="emailID" required ngModel name="emailID" #emailID="ngModel" type="text" value="" class="form-control"> 
+     <div class="alert alert-danger" *ngIf="emailID.touched && !emailID.valid" >Email Id is required </div> 
+   </div>
+     <div class="form-row">
+     <label for="password">Password</label>
+     <input id="password" minlength="6" maxlength="12" required ngModel name="password"  #password="ngModel"  type="password" value="" class="form-control"> 
+   <div class="alert alert-danger" *ngIf="password.touched && !password.valid" >Password is required </div> 
+   </div>
+    <div class="form-row">
+     <label for="confirmPass">Confirm Password</label>
+     <input id="confirmPass"  minlength="6" maxlength="12" required ngModel name="confirmPass"  #confirmPass="ngModel"  type="password" value="" class="form-control"> 
+      <div class="alert alert-danger" *ngIf="confirmPass.touched && !confirmPass.valid" >Confirm Password is required </div> 
+   </div>
+    <div class="form-row squaredThree">
+        <input type="checkbox" ng-model name="accept" value="None" id="squaredThree" name="check" checked />
+        <label for="squaredThree"></label>
+        <span>I accept the Terms of Use & Privacy Plociy</span>
+   </div>
+   <div class="form-row"  style="margin-bottom:0px; padding-bottom:0px;">
+     <button [disabled]="!f.valid" class="btn rg-btn" style="margin-bottom: 20px;">Register Now</button>
+   </div>
+   <div style="clear:both"></div>
+  </div>
+
+
+<div class="panel-form company-signup"  style="display: none;">
+    <h1> Company</h1>
+   <div class="form-row">
+     <label for="firstName">First Name</label>
+     <input required ngModel name="firstName" #firstName="ngModel" (change)="log(firstName)" id="firstName" type="text" value="" class="form-control"> 
+     <div class="alert alert-danger" *ngIf="firstName.touched && !firstName.valid" >Fist Name is required </div>
+   </div>
+  <div class="form-row">
+     <label for="lastName">Last Name</label>
+     <input required ngModel name="lastName"  #lastName="ngModel" id="lastName" type="text" value="" class="form-control">
+          <div class="alert alert-danger" *ngIf="lastName.touched && !lastName.valid" >Last Name is required </div> 
+   </div>
+    <div class="form-row">
+     <label for="emailID">Email</label>
+     <input id="emailID" required ngModel name="emailID" #emailID="ngModel" type="text" value="" class="form-control"> 
+     <div class="alert alert-danger" *ngIf="emailID.touched && !emailID.valid" >Email Id is required </div> 
+   </div>
+     <div class="form-row">
+     <label for="password">Password</label>
+     <input id="password" minlength="6" maxlength="12" required ngModel name="password"  #password="ngModel"  type="password" value="" class="form-control"> 
+   <div class="alert alert-danger" *ngIf="password.touched && !password.valid" >Password is required </div> 
+   </div>
+    <div class="form-row">
+     <label for="confirmPass">Confirm Password</label>
+     <input id="confirmPass"  minlength="6" maxlength="12" required ngModel name="confirmPass"  #confirmPass="ngModel"  type="password" value="" class="form-control"> 
+      <div class="alert alert-danger" *ngIf="confirmPass.touched && !confirmPass.valid" >Confirm Password is required </div> 
+   </div>
+    <div class="form-row squaredThree">
+        <input type="checkbox" ng-model name="accept" value="None" id="squaredThree" name="check" checked />
+        <label for="squaredThree"></label>
+        <span>I accept the Terms of Use & Privacy Plociy</span>
+   </div>
+   <div class="form-row"  style="margin-bottom:0px; padding-bottom:0px;">
+     <button [disabled]="!f.valid" class="btn rg-btn" style="margin-bottom: 20px;">Register Now</button>
+   </div>
+   <div style="clear:both"></div>
+  </div>
+  </div><!--register-page end-->
+
+
+
    <footer>
-  <a routerLink="/login" class="btn lg-btn">Back to Sign In </a> 
+  <a routerLink="/login" class="btn lg-btn">Already have one? <strong>Sign In here.</strong></a> 
 </footer>
  </div>
 </form>

@@ -2,15 +2,18 @@
     background: #fff;
     padding: 40px 40px 0px;
     border-radius: 25px 25px 0px 0px;
+    overflow: hidden;
 }
 .register-page .form-row {
     margin-bottom: 20px;
 }
 h3.title-txt{
     position: relative;
-    text-align: center;
+    text-align: left;
+     line-height: 24px;
+      color: #abbe4d;
 }
-h3.title-txt span{
+/*h3.title-txt span{
     line-height: 24px;
     background: #fff;
     margin-right: 20px;
@@ -33,7 +36,7 @@ h3.title-txt:after, h3.title-txt:before{
      display: block;
     width: 100%;
     z-index: 1;
-}
+}*/
 .squaredThree {
   position: relative;
 }
@@ -84,14 +87,30 @@ form footer {
     background: #9cb226;
     border-radius: 0px 0px 25px 25px;
     padding: 10px;
-    text-align: center;
+    text-align: left;
 }
 
 form footer .lg-btn{
     background:  transparent;
-    color: #24280d;
+    color: #fff;
     width: 100%;
+     font-size: 16px !important;
+    font-weight: normal !important;
+    text-align: left !important;
+}
+form footer .lg-btn strong:hover{
+    text-decoration: underline;
 }
 form .rg-btn{
   font-size: 16px !important;
+}
+.register-choice-item {
+    border: 2px solid #eee;
+    padding: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.register-choice-item.selected{
+    border: 2px solid #85952a; 
+    background: #c9e051;
 }

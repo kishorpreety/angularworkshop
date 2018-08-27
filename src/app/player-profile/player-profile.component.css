@@ -23,3 +23,9 @@ h1{
 .table td p{
     color: #eaeaea;
 }
+.fade:not(.show){
+    opacity: 10;
+}
+.modal.fade .modal-dialog{
+    margin-top: 300px;
+}
