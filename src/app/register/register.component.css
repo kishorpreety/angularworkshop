@@ -13,6 +13,10 @@ h3.title-txt{
      line-height: 24px;
       color: #abbe4d;
 }
+.lg-btn{
+    border: none !important;
+}
+
 /*h3.title-txt span{
     line-height: 24px;
     background: #fff;
@@ -110,7 +114,13 @@ form .rg-btn{
     margin-bottom: 20px;
     cursor: pointer;
 }
+.register-choice-item:hover{
+    border: 2px solid #85952a; 
+    background: #c9e051;
+}
 .register-choice-item.selected{
     border: 2px solid #85952a; 
     background: #c9e051;
 }
+
+

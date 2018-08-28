@@ -13,6 +13,7 @@ import { RegisterComponent } from './register/register.component';
 import { AboutComponent } from './about/about.component';
 import { ExpertiseComponent } from './expertise/expertise.component';
 import { PlayerProfileComponent } from './player-profile/player-profile.component';
+import { DashboardPlayerComponent } from './dashboard-player/dashboard-player.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { PlayerProfileComponent } from './player-profile/player-profile.componen
 	RegisterComponent,
 	AboutComponent,
 	ExpertiseComponent,
-  PlayerProfileComponent
+  PlayerProfileComponent,
+  DashboardPlayerComponent
   ],
   imports: [
     BrowserModule,
