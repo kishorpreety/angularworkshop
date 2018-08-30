@@ -1,31 +1,75 @@
-h1{
+.player-container h4{
     color: #fefefe;
 }
-.table-striped tbody tr:nth-of-type(odd){
-    background-color: #000;
+table#profile-table {
+    margin-top: 10px;
 }
-.table-striped tbody tr:nth-of-type(even){
-    background-color: #fff;
+
+#profile-table thead {
+    background: rgb(0, 0, 0,0.7);
+    color: #fff;
+    margin-bottom: 10px;
 }
-.table th, .table td{
-    border: none;
+#profile-table thead tr th {
     padding: 10px;
-      color: #eaeaea;
-}
-.table td h4{
+    color: #acacac;
     font-size: 16px;
-    color: #eaeaea;
+    font-weight: normal;
 }
-.table td a{
-    font-size: 14px;
+#profile-table tbody tr td{
+   padding: 2px 10px;
+     color: #777;
+}
+#profile-table tbody tr{
+    margin-bottom: 10px;
+}
+#profile-table tbody tr:nth-child(odd) {
+    background: rgb(0, 0, 0,0.7);
+    color: #fff;
+}
+
+#profile-table tbody tr:nth-child(even) {
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+#profile-table tbody:before {
+    /* This doesn't work because of border-collapse */
+    line-height:1em;
+    content:".";
+    display:block;
+}
+#profile-table tbody tr td .btn {
+   margin: 5px 0px;
+}
+button.btn.add-btn {
+    padding: 5px 24px;
+    border: 2px solid #bff201;
+    border-radius: 12px;
+    background: transparent;
     color: #bff201;
+    font-weight: normal;
 }
-.table td p{
-    color: #eaeaea;
+button.btn.remove-btn {
+    padding: 5px 10px;
+    border: 2px solid #7d7d7d !important;
+    border-radius: 12px;
+    background: transparent !important;
+    color: #7d7d7d !important;
+    font-weight: normal;
 }
-.fade:not(.show){
-    opacity: 10;
+#system-search{
+     background: transparent;
+    border: 1px solid #000;
 }
-.modal.fade .modal-dialog{
-    margin-top: 300px;
+#system-search::placeholder{
+    color: #fff;
+}
+.serach-btn{
+    background: #000;
+}
+.serach-btn .fa-search{
+    color: #fff;
+}
+.player-container .col-sm-8 table{
+    width: 100%;
 }
