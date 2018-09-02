@@ -6,8 +6,8 @@
               <div class="row">
               <div class="profile-img-section col-sm-3">
                   <img src="assets/images/default-profile.png" class="img-responsive profile-img">
-                  <input id="profile-image-upload" class="hidden" type="file">
-                  <div  class="add-pp"> + add profile photo </div>
+                 <!-- <input id="profile-image-upload" class="hidden" type="file">
+                  <div  class="add-pp"> + add profile photo </div>-->
               </div>
               <div class="col-md-9 col-sm-9 col-xs-12 profile-section-panel">
                 <span class="highlighter">Welcome to Tennis Tune-Up.</span>
@@ -52,6 +52,68 @@
 
 <!--edit player profile:start-->
 <div class="edit-player-profile">
-  <h1>Player Profile</h1>
+  <div class="title-bar">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    <h1>Hi! Jenifer Smith </h1>
+    <p>Please provide below information to enhance your profile </p>
+  </div>
+     <form class="seminor-login-form">
+     <div class="profile-img-section text-center">
+        <img src="assets/images/default-profile-grey.png" id="profile-pic" alt="Profile picture"  class="img-responsive profile-img">
+        <input id="profile-image-upload" class="hidden" id="my-file" type="file">
+         <div  class="add-pp"> + add profile photo </div>
+     </div>
+     <div class="row">
+     <div class="form-group col-sm-6">
+       <input type="text" class="form-control" required autocomplete="off">
+       <label class="form-control-placeholder" for="fr-nm">First Name</label>
+     </div>
+     <div class="form-group col-sm-6">
+       <input type="email" class="form-control" required autocomplete="off">
+       <label class="form-control-placeholder" for="lt-nm">Last Name</label>
+     </div>
+     </div>
+     <div class="form-group">
+       <input type="text" class="form-control" required autocomplete="off">
+       <label class="form-control-placeholder" for="country">Country</label>
+     </div>
+     <div class="row">
+      <div class="form-group col-sm-3">
+       <input type="number" max="45" min="18" placehoder="Age" class="form-control" required autocomplete="off">
+       <label class="form-control-placeholder" for="age">Age</label>
+     </div>
+       <div class="form-group col-sm-3">
+       <input type="text"  placehoder="Gender" class="form-control" required autocomplete="off">
+       <label class="form-control-placeholder" for="gender">Gender </label>
+     </div>
+         <div class="form-group col-sm-3">
+       <input  type="number" max="251" min="115"  placehoder="weight" class="form-control" required autocomplete="off">
+       <label class="form-control-placeholder" for="weight">Weight </label>
+     </div>
+        <div class="form-group col-sm-3">
+       <input  type="number" max="251" min="115"  placehoder="height" class="form-control" required autocomplete="off">
+       <label class="form-control-placeholder" for="height">Height </label>
+     </div>
+     </div>
+     <div class="form-group">
+       <input type="text"  class="form-control" required autocomplete="off">
+       <label class="form-control-placeholder" for="br-palce">Birth Place</label>
+     </div>
+     <div class="form-group">
+       <input type="text" class="form-control" required autocomplete="off">
+       <label class="form-control-placeholder" for="residence">  Residence </label>
+     </div>
+     <div class="form-group">
+       <input type="text" class="form-control" required autocomplete="off">
+       <label class="form-control-placeholder" for="plays"> Plays  </label>
+     </div>
+          <div class="form-group">
+       <input type="text" class="form-control" required autocomplete="off">
+       <label class="form-control-placeholder" for="player-bio"> Player Bio  </label>
+     </div>
+       <div class="btn-check-log">
+           <button type="submit" class="btn-check-login">Update Profile</button>
+       </div>
+     </form>
 </div>
 <!--end-->

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { AngularFireDatabase } from 'angularfire2/database';
+import { Observable } from 'rxjs';
 @Component({
   selector: 'player-profile',
   templateUrl: './player-profile.component.html',
@@ -7,7 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlayerProfileComponent implements OnInit {
 
-  constructor() { }
+  public teamList: any;
+
+  constructor(public db: AngularFireDatabase) {
+    this.teamList = db.list('/teams').valueChanges();
+    console.log(this.teamList);
+   }
 
   ngOnInit() {
   }

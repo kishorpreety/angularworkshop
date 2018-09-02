@@ -118,29 +118,30 @@
 <div class="panel-form player-signup" >
 	<h1> Player</h1>
 
-   <form class="seminor-login-form">
+   <form class="seminor-login-form"  (ngSubmit)="savePlayerForm()" [formGroup]="playerForm" >
      <div class="form-group">
-       <input type="text" class="form-control" required autocomplete="off">
-       <label class="form-control-placeholder" for="user-name">User Name</label>
+       <input type="text" class="form-control" formControlName="playerUserName" required autocomplete="off" name="playerUserName">
+       <label class="form-control-placeholder" for="playerUserName">User Name</label>
+     
      </div>
      <div class="form-group">
-       <input type="email" class="form-control" required autocomplete="off">
+       <input type="email" class="form-control" formControlName="playerEmail"  required autocomplete="off">
        <label class="form-control-placeholder" for="contact-email">Contact Email</label>
      </div>
      <div class="form-group">
-       <input type="password" class="form-control" required autocomplete="off">
+       <input type="password" class="form-control" formControlName="playerPassword"  required autocomplete="off">
        <label class="form-control-placeholder" for="password">Password</label>
      </div>
      <div class="form-group">
-       <input type="password" class="form-control" required autocomplete="off">
+       <input type="password" class="form-control" formControlName="playerConfirmPassword"  required autocomplete="off" >
        <label class="form-control-placeholder" for="password-conf">Confirm Password</label>
      </div>
      <div class="form-group">
-       <input type="text" class="form-control" required autocomplete="off">
+       <input type="text" class="form-control" formControlName="playerFirstName"  required autocomplete="off"   >
        <label class="form-control-placeholder" for="First-name"> First Name </label>
      </div>
      <div class="form-group">
-       <input type="text" class="form-control" required autocomplete="off">
+       <input type="text" class="form-control" formControlName="playerLastName"  required autocomplete="off"  >
        <label class="form-control-placeholder" for="Last-name"> Last Name </label>
      </div>
        <div class="btn-check-log">
@@ -158,33 +159,33 @@
 <ng-container *ngIf="teamsignupshow">
 <div class="panel-form team-signup" >
     <h1> Team</h1>
-   <form class="seminor-login-form">
+   <form class="seminor-login-form"  (ngSubmit)="saveTeamForm()" [formGroup]="teamForm" >
      <div class="form-group">
-       <input type="text" class="form-control" required autocomplete="off">
-       <label class="form-control-placeholder" for="user-name">User Name</label>
+       <input type="text" class="form-control" required autocomplete="off" formControlName="teamUserName" >
+       <label class="form-control-placeholder" for="team-user-name">User Name</label>
      </div>
      <div class="form-group">
-       <input type="email" class="form-control" required autocomplete="off">
-       <label class="form-control-placeholder" for="contact-email">Contact Email</label>
+       <input type="email" class="form-control" required autocomplete="off" formControlName="teamEmail">
+       <label class="form-control-placeholder" for="team-contact-email">Contact Email</label>
      </div>
      <div class="form-group">
-       <input type="password" class="form-control" required autocomplete="off">
-       <label class="form-control-placeholder" for="password">Password</label>
+       <input type="password" class="form-control" required autocomplete="off" formControlName="teamPassword">
+       <label class="form-control-placeholder" for="team-password">Password</label>
      </div>
      <div class="form-group">
-       <input type="password" class="form-control" required autocomplete="off">
-       <label class="form-control-placeholder" for="password-conf">Confirm Password</label>
+       <input type="password" class="form-control" required autocomplete="off" formControlName="teamConfirmPassword">
+       <label class="form-control-placeholder" for="team-password-conf">Confirm Password</label>
      </div>
      <div class="form-group">
-       <input type="text" class="form-control" required autocomplete="off">
-       <label class="form-control-placeholder" for="First-name"> First Name </label>
+       <input type="text" class="form-control" required autocomplete="off" formControlName="teamFirstName">
+       <label class="form-control-placeholder" for="team-First-name"> First Name </label>
      </div>
      <div class="form-group">
-       <input type="text" class="form-control" required autocomplete="off">
-       <label class="form-control-placeholder" for="Last-name"> Last Name </label>
+       <input type="text" class="form-control" required autocomplete="off" formControlName="teamLastName">
+       <label class="form-control-placeholder" for="team-Last-name"> Last Name </label>
      </div>
        <div class="btn-check-log">
-           <button type="submit" class="btn-check-login">Sign Up</button>
+           <button type="submit" class="btn-check-login team-signup">Sign Up</button>
        </div>
        <div class="form-group term-group">
            By cliking the signUp button, you agree to our <a href="#">Terms & Condition,</a> and <a href="#">Privacy Policy</a>
@@ -196,33 +197,33 @@
 <ng-container *ngIf="companysignupshow">
 <div class="panel-form company-signup" >
     <h1> Company</h1>
-  <form class="seminor-login-form">
+  <form class="seminor-login-form" (ngSubmit)="saveCompanyForm()" [formGroup]="companyForm">
      <div class="form-group">
-       <input type="text" class="form-control" required autocomplete="off">
-       <label class="form-control-placeholder" for="user-name">User Name</label>
+       <input type="text" class="form-control" required autocomplete="off" formControlName="comanyUserName">
+       <label class="form-control-placeholder" for="com-user-name">User Name</label>
      </div>
      <div class="form-group">
-       <input type="email" class="form-control" required autocomplete="off">
-       <label class="form-control-placeholder" for="contact-email">Contact Email</label>
+       <input type="email" class="form-control" required autocomplete="off" formControlName="comanyEmail">
+       <label class="form-control-placeholder" for="com-contact-email">Contact Email</label>
      </div>
      <div class="form-group">
-       <input type="password" class="form-control" required autocomplete="off">
-       <label class="form-control-placeholder" for="password">Password</label>
+       <input type="password" class="form-control" required autocomplete="off" formControlName="comanyPassword">
+       <label class="form-control-placeholder" for="com-password">Password</label>
      </div>
      <div class="form-group">
-       <input type="password" class="form-control" required autocomplete="off">
-       <label class="form-control-placeholder" for="password-conf">Confirm Password</label>
+       <input type="password" class="form-control" required autocomplete="off" formControlName="comanyConfirmPassword">
+       <label class="form-control-placeholder" for="com-password-conf">Confirm Password</label>
      </div>
      <div class="form-group">
-       <input type="text" class="form-control" required autocomplete="off">
-       <label class="form-control-placeholder" for="First-name"> First Name </label>
+       <input type="text" class="form-control" required autocomplete="off" formControlName="comanyFirstName">
+       <label class="form-control-placeholder" for="com-First-name"> First Name </label>
      </div>
      <div class="form-group">
-       <input type="text" class="form-control" required autocomplete="off">
-       <label class="form-control-placeholder" for="Last-name"> Last Name </label>
+       <input type="text" class="form-control" required autocomplete="off" formControlName="comanyLastName">
+       <label class="form-control-placeholder" for="com-Last-name"> Last Name </label>
      </div>
        <div class="btn-check-log">
-           <button type="submit" class="btn-check-login">Sign Up</button>
+           <button type="submit" class="btn-check-login com-signup">Sign Up</button>
        </div>
        <div class="form-group term-group">
            By cliking the signUp button, you agree to our <a href="#">Terms & Condition,</a> and <a href="#">Privacy Policy</a>

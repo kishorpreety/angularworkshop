@@ -17,54 +17,36 @@
      
      </thead>
  </table>
- 
+ <h2>Content from Firebase</h2>
+	<div class="col-md-3">
+		<pre *ngFor="let team of teamList | async">{{team.teamFirstName}}</pre>
+	</div>
  <hr>
     <div class="row">
         <div class="col-sm-12">
             <table id="profile-table" class="display" cellspacing="0" width="100%">
                     <thead>
                         <tr>
-                            <th>PlayerName</th>
-                            <th>Team</th>
-                            <th>Country</th>
-                            <th>Coach</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Email</th>
+                            <th>Username</th>
+                            <th>Date</th>
                             <th>Salary</th>
                             <th> &nbsp;</th>
                         </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <td>mikec</td>
-                        <td>Mike Clark</td>
-                        <td>Mike</td>
-                        <td>Clark</td>
-                        <td>myemail@gmail.com</td>
-                        <td class="text-center"><button class="btn add-btn">Add</button><button class="btn btn-danger remove-btn" style="display:none;">Remove</button></td>
+                    <tr *ngFor="let team of teamList | async">
+                        <td>{{team.teamFirstName}}</td>
+                        <td>{{team.teamLastName}}</td>
+                        <td>{{team.teamEmail}}</td>
+                        <td>{{team.teamUserName}}</td>
+                        <td>{{team.currentTime}}</td>
+                        <td>{{team.teamEmail}}</td>
+                       <td class="text-center"><button class="btn add-btn">Add</button><button class="btn btn-danger remove-btn" style="display:none;">Remove</button></td>
                     </tr>
-                    <tr>
-                        <td>ccc</td>
-                        <td>Maddie Clark</td>
-                        <td>Maddie</td>
-                        <td>Clark</td>
-                        <td>myemail@gmail.com</td>
-                         <td class="text-center"><button class="btn add-btn">Add</button><button class="btn btn-danger remove-btn" style="display:none;">Remove</button></td>
-                    </tr>
-                      <tr>
-                        <td>mikec</td>
-                        <td>Mike Clark</td>
-                        <td>Mike</td>
-                        <td>Clark</td>
-                        <td>myemail@gmail.com</td>
-                        <td class="text-center"><button class="btn add-btn">Add</button><button class="btn btn-danger remove-btn" style="display:none;">Remove</button></td>
-                    </tr>
-                    <tr>
-                        <td>ccc</td>
-                        <td>Maddie Clark</td>
-                        <td>Maddie</td>
-                        <td>Clark</td>
-                        <td>myemail@gmail.com</td>
-                         <td class="text-center"><button class="btn add-btn">Add</button><button class="btn btn-danger remove-btn" style="display:none;">Remove</button></td>
-                    </tr>
+                   
                     </tbody>
             </table>
         </div>
